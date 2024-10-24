@@ -13,3 +13,9 @@ function draw() {
   background(220);
   circle(x,y,radius)
 }
+
+function keyPressed() {
+  x = random(width) // [0,width)
+  y = random(height)
+  radius = random(10,20)  
+}
