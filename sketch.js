@@ -18,6 +18,12 @@ function draw() {
   circle(x,y,radius)
   x = x + dx
   y = y + dy
+  if( x < 0 || x > width ) {
+    dx = dx * -1
+  }
+  if( y < 0 || y > height ) { // || means "or"
+    dy = dy * -1
+  }
 }
 
 function keyPressed() {
@@ -38,8 +44,8 @@ function changeColor() {
 
 function createNewCircle() {
   changeColor()
-  dx = random(-1,1)
-  dy = random(-1,1)
+  dx = random(-3,3)
+  dy = random(-3,3)
   x = random(width) // [0,width)
   y = random(height)
   radius = random(10,20)        
